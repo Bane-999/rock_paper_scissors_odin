@@ -17,39 +17,39 @@ function computerPlay() {
     return comp_pick;
 }
 
-function game(x, y) {
+function playRound(x, y) {
     console.log(`Computer picks: ${y}`);
     if(x == "rock") {
         if(y == "rock") {
-            console.log("It's a Draw!");
+            return "It's a Draw!";
         }
         else if(y == "paper") {
-            console.log("You lose!");
+            return "You lose!";
         }
         else {
-            console.log("You won!");
+            return "You won!";
         }
     }
     else if(x == "paper") {
         if(y == "rock") {
-            console.log("You won!");
+            return "You won!";
         }
         else if(y == "paper") {
-            console.log("It's a Draw!");
+            return "It's a Draw!";
         }
         else {
-            console.log("You lose!");
+            return "You lose!";
         }
     }
     else {
         if(y == "rock") {
-            console.log("You lose!");
+            return "You lose!";
         }
         else if(y == "paper") {
-            console.log("You won!");
+            return "You won!";
         }
         else {
-            console.log("It's a Draw!");
+            return "It's a Draw!";
         }
     }
 }
@@ -57,7 +57,7 @@ function game(x, y) {
 let user_pick = prompt("Choose rock, paper or scissors.");
 user_pick = user_pick.toLowerCase();
 if(user_pick == "rock" || user_pick == "paper" || user_pick == "scissors") {
-    game(user_pick, computerPlay());
+    console.log(playRound(user_pick, computerPlay()));
 }
 else {
     console.log("Wrong input!");
