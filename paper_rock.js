@@ -55,6 +55,7 @@ function game(x, y) {
 }
 
 let user_pick = prompt("Choose rock, paper or scissors.");
+user_pick = user_pick.toLowerCase();
 if(user_pick == "rock" || user_pick == "paper" || user_pick == "scissors") {
     game(user_pick, computerPlay());
 }
