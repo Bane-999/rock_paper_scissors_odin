@@ -19,44 +19,29 @@ function computerPlay() {
 
 function playRound(y) {
     let user_pick = prompt("Choose rock, paper or scissors.");
-    user_pick = user_pick.toLowerCase();
+    user_pick = user_pick.toLowerCase();    
     if(user_pick == "rock" || user_pick == "paper" || user_pick == "scissors") {
 
         console.log(`Computer picks: ${y}`);
-        if(user_pick == "rock") {
-            if(y == "rock") {
-                return "It's a Draw!";
-            }
-            else if(y == "paper") {
-                return "You lose!";
-            }
-            else {
-                return "You won!";
-            }
+        if(
+            user_pick == "rock" && y == "rock" || 
+            user_pick == "paper" && y == "paper" ||
+            user_pick == "scissors" && y == "scissors"
+        ) {
+            return "It's a Draw!";
         }
-        else if(user_pick == "paper") {
-            if(y == "rock") {
-                return "You won!";
-            }
-            else if(y == "paper") {
-                return "It's a Draw!";
-            }
-            else {
-                return "You lose!";
-            }
+        else if(
+            user_pick == "rock" && y == "scissors" || 
+            user_pick == "paper" && y == "rock" ||
+            user_pick == "scissors" && y == "paper"
+        ) {
+            return "You won!";
         }
         else {
-            if(y == "rock") {
-                return "You lose!";
-            }
-            else if(y == "paper") {
-                return "You won!";
-            }
-            else {
-                return "It's a Draw!";
-            }
-        }
+            return "You lose!";
+        }        
     }  
+    
     else {
         console.log("Wrong input!");
     }  
@@ -78,6 +63,7 @@ function game() {
             score_user++;
         }
         console.log(score);
+        console.log(`Score is: ${score_user}/${score_comp}`);
     }
     if(score_user > score_comp) {
         console.log(`Congratulations. You have won the game! Final score is: ${score_user}/${score_comp}`);
