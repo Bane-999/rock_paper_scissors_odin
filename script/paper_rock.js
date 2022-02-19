@@ -49,6 +49,7 @@ function playRound(y) {
 
 function game() {
     let score_user=0, score_comp=0;
+    let disp_user_score = document.query
     let score;
     for(let i=0; i<5; i++) {
         score = playRound(computerPlay());
