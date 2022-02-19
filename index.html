@@ -3,8 +3,37 @@
     <head>
         <title>Game</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./script/paper_rock.js" defer></script>
     </head>
-    <body>
-        <script src="paper_rock.js"></script>
+    <body>        
+        <div class="header">
+            <span class="text title"></span>
+            <span class="text subtext"></span>
+        </div>
+
+        <div class="icons">
+            <button class="btn btn_1"></button>
+            <button class="btn btn_2"></button>
+            <button class="btn btn_3"></button>
+        </div>
+
+        <div class="picks">
+            <div class="pick left"></div>
+            <div class="pick right"></div>
+        </div>
+
+        <div class="footer">
+            <span class="score user_score">
+                <span class="text top"></span>
+                <span class="text bot"></span>
+            </span>
+            <span class="text final_score"></span>
+            <span class="score comp_score">
+                <span class="text top"></span>
+                <span class="text bot"></span>
+            </span>            
+        </div>        
+        
     </body>
 </html>
