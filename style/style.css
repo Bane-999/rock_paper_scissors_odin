@@ -12,11 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 400px 10px;
+    padding: 20px 400px 10px;
 }
 
-.header {
-    background:yellow;    
+.header {   
     min-height:200px;
     min-width:500px;
     display: flex;  
@@ -24,12 +23,11 @@ body {
     align-items: center; 
     justify-content: space-between;
     font-family: "Freckle Face", sans-serif;    
+    color: #ffff;
 }
 
-.header_text {
-    background:rgb(133, 203, 231);    
-    text-align: center;   
-    border: 3px solid red;
+.header_text {  
+    text-align: center;  
 }
 
 .title {
@@ -41,16 +39,15 @@ body {
 .subtext {
     font-size: 33px;
     height:100px;
-    width: 250px;
+    width: 280px;
 }
 
 
-.icons {
-    background:blue;    
+.icons { 
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    gap:10px;
+    margin-top: 20px;
+    gap:30px;      
 }
 
 .btn {
@@ -58,7 +55,19 @@ body {
     width: 210px;
     background: none;
     border: none;
+    box-shadow: 15px 15px 20px black;
+    border-radius: 100%;
+    transition: all 0.12s;  
 }
+
+
+.clicked {
+    transform: scale(0.9);
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px black;
+
+}
+
 
 .btn_1 {   
     background-image: url(../img/paper_1.png);
@@ -72,27 +81,25 @@ body {
     background-image: url(../img/rock_1.png);
 }
 
-.picks {
-    background:rgb(24, 241, 60);    
+.picks {    
     height:100px;
     width: 300px;    
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 80px;
 }
 
 .pick {
-    border: 3px solid rgb(4, 0, 255);
     height:100px;
     width:100px;
-    background: blue;
 }
 
-
+img {
+    border: 0;
+}
 
 .footer {
     margin-top: 10px;
-    background:rgb(180, 25, 219);
     height:100px;
     width: 700px;
     display: flex;
@@ -101,12 +108,11 @@ body {
 }
 
 .text {
-    background:rgb(219, 158, 25);
-    height:100px;
+    height:50px;
     width: 200px;
-    border: 3px solid red;
     text-align: center;
     font-family: "Freckle Face", sans-serif; 
+    color: #ffff;
 }
 
 .top {
@@ -115,21 +121,19 @@ body {
 
 .bot {
     font-size:50px;
+    text-align: center;
 }
 
 .score {
-    background:rgb(106, 173, 236);
     display: flex;
     flex-direction: column;    
     height:100px;
-    width: 250px;
-    border: 3px solid red;    
+    width: 250px; 
 }
 
 .final_score {
     margin-top: 20px;
     width:400px;
     height:160px;
-    font-size: 70px;
-    color: red;
+    font-size: 50px;      
 }
